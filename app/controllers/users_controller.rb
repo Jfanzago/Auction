@@ -1,10 +1,8 @@
-class UserController < ApplicationController
-
-
+class UsersController < ApplicationController
 	def index
 		@users = User.all
 			if @users.empty?
-				render 'no_users'
+				render 'no_such_user'
 			else
 				render 'index'
 		end
@@ -13,9 +11,9 @@ class UserController < ApplicationController
 	def show
 		@user = User.find_by(id: params[:id])
 		if @user
-			render 'show'
+			render 'show'					
 		else
-			render 'user_not_found'
+			render 'no_such_user'
 		end
 	end
 
@@ -41,4 +39,4 @@ class UserController < ApplicationController
 	def user_params
 		params.require(:user).permit(:name, :email)
 	end
-end	
+end

@@ -6,14 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Jane = User.new(name: "Jane", email:"Jane@gmail.com")
-Bobby = User.new(name: "Bobby", email:"bobby@hotmail.com")
-Joe = User.new(name: "Joe", email:"Joe@gmail.com")
-Nizar = User.new(name: "Nizar", email:"Nizar@yahoo.com")
-
-
-user.products.create(title:"Oven" , description:"hot, hot, hot, hot", deadline: date.now+1)
-user.products.create(title:"Toaster" , description:"toast, toast, toast, toast", deadline: date.now+1)
-user.products.create(title:"Dishwasher" , description:"wash, wash, wash, wash", deadline: date.now+1)
-user.products.create(title:"Dryer" , description:"dry, dry, dry, dry", deadline: date.now+1)
-user.products.create(title:"" , description:"hot, hot, hot, hot", deadline: date.now+1)
+Jane = User.create(name: "Jane", email:"Jane@gmail.com")
+Bobby = User.create(name: "Bobby", email:"bobby@hotmail.com")
+Joe = User.create(name: "Joe", email:"Joe@gmail.com")
+Nizar = User.create(name: "Nizar", email:"Nizar@yahoo.com")

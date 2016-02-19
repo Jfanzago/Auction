@@ -1,11 +1,5 @@
 <h1> Become a USER! </h1>
-<ul>
-<% if @user.errors.any? %>
-<%@user.errors.full_message.each do |error| %>
-<li><%= error %></li>
-<% end %>
-<% end %>
-</ul>
+
 
 <%= form_for @user do |f| %>
 <%= f.label :name %>
@@ -18,5 +12,4 @@
 <br>
 <%= link_to("Cancel", users_path)%>
 <%= link_to("Home", '/')%>
-
 <% end %>

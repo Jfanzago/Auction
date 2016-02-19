@@ -1,10 +1,10 @@
 <h1> Welcome <%= @user.name%>!</h1>
 
-<p> Name: <%= user.name%></p>
-<p> Email: <%= user.email%></p>
+<p> Name: <%= @user.name%></p>
+<p> Email: <%= @user.email%></p>
 <p> <%= link_to("Upload a Product", new_user_product_path(@user)) %>
 <br>
-<p><%= link_to("All Products", user_product_path(@user)) %></p>
+<p><%= link_to("All Products", user_products_path(@user)) %></p>
 <br>
 <%= link_to("Home", '/')%>
 <br>

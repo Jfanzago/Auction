@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
 		else
 			@products = Product.all
 		end
-	def 	def show
+	end	
+	
+	def show
 		@user = User.find_by(id: params[:user_id])
 		@product = @user.products.find_by(id: params[:id])
 		if @product
@@ -14,10 +16,10 @@ class ProductsController < ApplicationController
 		else
 			render 'product_not_found'
 		end
-
+	end 
+		
 	def destroy
 	end
-
 
 	def new
 		@user = User.find_by(id: params[:user_id])
@@ -32,10 +34,11 @@ class ProductsController < ApplicationController
 		else
 			render 'new'
 		end
+	end
 
 		private #this says only the three arguments are allowed!
 	def product_params
 		params.require(:product).permit(:title, :description, :amount, :deadline)
-	en
+	end
 
 end
